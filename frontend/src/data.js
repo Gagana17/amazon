@@ -4,7 +4,7 @@ const data = {
       name: 'Turmeric',
       category: 'Raw materials',
       image: '/images/p1.jpg',//679px * 829px
-      countInStock: '1000kg',
+      quantity: '1000kg',
       brand: 'Turmeric powder',
       description: 'high quality materials',
     },
@@ -12,7 +12,7 @@ const data = {
       name: 'Cinnamon',
       category: 'Raw materials',
       image: '/images/p2.jpg',//679px * 829px
-      countInStock: '3000kg',
+      quantity: '3000kg',
       brand: 'Lankan Cinnamon',
       description: 'high quality materials',
     },
@@ -20,7 +20,7 @@ const data = {
       name: 'Ginger',
       category: 'Raw materials',
       image: '/images/p3.jpg',//679px * 829px
-      countInStock: '2000kg',
+      quantity: '2000kg',
       brand: 'Ginger',
       description: 'high quality materials',
     },
@@ -28,7 +28,7 @@ const data = {
       name: 'Pepper',
       category: 'Raw materials',
       image: '/images/p4.jpg',//679px * 829px
-      countInStock: '3000kg',
+      quantity: '3000kg',
       brand: 'Pepper Powder',
       description: 'high quality materials',
     },

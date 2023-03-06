@@ -14,6 +14,8 @@ function App() {
             <img src={product.image} alt={product.name} />
             <p>{product.name}</p>
             <p>{product.quantity}</p>
+            <div class="product-info">
+          </div>
           </div>
         ))}
         </div>
