@@ -1,5 +1,23 @@
 {
   "dependencies": {
     "react-router-dom": "^6.8.2"
-  }
+  },
+  "name": "amazon",
+  "description": "introduction\r install tools\r create React App\r Create Git Repsitory",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gagana17/amazon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gagana17/amazon/issues"
+  },
+  "homepage": "https://github.com/Gagana17/amazon#readme"
 }
