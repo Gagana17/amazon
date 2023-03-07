@@ -1,5 +1,5 @@
-/* eslint-disable no-undef */
 function ProductScreen() {
+  // eslint-disable-next-line no-undef
   const params = useParams();
   const { slug } = params;
   return (
