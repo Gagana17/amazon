@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-undef */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import data from './data';
-import { BroswerRouter } from 'react-router-dom';
+import { BroswerRouter, Route, Routes } from 'react-router-dom';
 import HomeScreen from './screens/HomeScreen';
 
 function App() {
