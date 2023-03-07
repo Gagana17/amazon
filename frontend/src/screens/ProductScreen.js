@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 function ProductScreen() {
   const params = useParams();
   const { slug } = params;
@@ -8,5 +7,4 @@ function ProductScreen() {
     </div>
   );
 }
-
 export default ProductScreen;
