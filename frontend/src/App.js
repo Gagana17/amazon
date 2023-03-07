@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 // eslint-disable-next-line no-unused-vars
 import data from './data';
-import { BrowserRouter, Route, Routes } from ' react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomeScreen from './screens/HomeScreen';
 
 function App() {
