@@ -14,7 +14,7 @@ function HomeScreen() {
   }, []);
   return (
     <div>
-      <h1>Featured product</h1>
+      <h1>Storage Management</h1>
       <div className="products">
         {products.map((product) => (
           <div className="product" key={product.slug}>
