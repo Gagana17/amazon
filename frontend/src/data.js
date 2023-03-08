@@ -1,4 +1,4 @@
-const product = {
+const data = {
   products: [
     {
       name: 'Turmeric',
@@ -35,4 +35,4 @@ const product = {
   ],
 };
 
-export default product;
+export default data;
