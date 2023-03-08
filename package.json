@@ -1,12 +1,12 @@
 {
   "dependencies": {
+    "http-proxy-middleware": "^2.0.6",
     "react-router-dom": "^6.8.2"
   },
   "name": "amazon",
   "description": "introduction\r install tools\r create React App\r Create Git Repsitory",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
