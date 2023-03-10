@@ -1,9 +1,9 @@
 /* eslint-disable default-case */
-// eslint-disable-next-line no-unused-vars
-import { useEffect, useState } from 'react';
+import { useEffect, useReducer, useState } from 'react';
 import { Link } from 'react-router-dom';
 //import data from '../data';
 import axios from 'axios';
+import logger from 'use-reducer-logger';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -20,7 +20,7 @@ const reducer = (state, action) => {
 
 function HomeScreen() {
   // eslint-disable-next-line no-undef, no-unused-vars
-  const [{ loading, error, products }, dispatch] = useReducer(reducer, {
+  const [{ loading, error, products }, dispatch] = useReducer(logger(reducer), {
     products: [],
     loading: true,
     error: '',
@@ -43,23 +43,29 @@ function HomeScreen() {
     <div>
       <h1>Storage Management</h1>
       <div className="products">
-        {products.map((product) => (
-          <div className="product" key={product.slug}>
-            <Link to={`/product/ ${product.slug}`}>
-              <img src={product.image} alt={product.name} />
-            </Link>
-            <div classname="product-info">
+        {loading ? (
+          <div>Loading...</div>
+        ) : error ? (
+          <div>{error}</div>
+        ) : (
+          products.map((product) => (
+            <div className="product" key={product.slug}>
+              }
               <Link to={`/product/ ${product.slug}`}>
-                <p>{product.name}</p>
+                <img src={product.image} alt={product.name} />
               </Link>
-              <p>
-                <strong>{product.quantity}</strong>{' '}
-              </p>
-
-              <button>More detais</button>
+              <div className="product-info">
+                <Link to={`/product/${product.slug}`}>
+                  <p>{product.name}</p>
+                </Link>
+                <p>
+                  <strong>${product.price}</strong>
+                </p>
+                <button>Add to cart</button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))
+        )}
       </div>
     </div>
   );
