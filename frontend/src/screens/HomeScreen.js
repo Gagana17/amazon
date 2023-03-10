@@ -1,5 +1,5 @@
-/* eslint-disable default-case */
-// eslint-disable-next-line no-unused-vars
+/* eslint-disable no-unused-vars */
+
 import { useEffect, useReducer, useState } from 'react';
 import { Link } from 'react-router-dom';
 //import data from '../data';
@@ -10,22 +10,22 @@ const reducer = (state, action) => {
   switch (action.type) {
     case 'FETCH_REQUEST':
       return { ...state, loading: true };
-    case 'FETCH_SUCCES':
+    case 'FETCH_SUCCESS':
       return { ...state, products: action.payload, loading: false };
     case 'FETCH_FAIL':
       return { ...state, loading: false, error: action.payload };
-      // eslint-disable-next-line no-labels, no-unreachable, no-unused-labels
-      deafault: return state;
+    default:
+      return state;
   }
 };
 
 function HomeScreen() {
-  // eslint-disable-next-line no-undef, no-unused-vars
   const [{ loading, error, products }, dispatch] = useReducer(logger(reducer), {
     products: [],
     loading: true,
     error: '',
   });
+  // const [products, setProducts] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       dispatch({ type: 'FETCH_REQUEST' });
@@ -51,7 +51,6 @@ function HomeScreen() {
         ) : (
           products.map((product) => (
             <div className="product" key={product.slug}>
-              }
               <Link to={`/product/ ${product.slug}`}>
                 <img src={product.image} alt={product.name} />
               </Link>
